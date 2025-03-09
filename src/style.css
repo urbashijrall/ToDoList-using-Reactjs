@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #cdb4db;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+}
+
+.todo-container {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.todo-wrapper {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #ffc8dd;
+}
+
+.right-container {
+  flex: 2;
+  background: #eae2f8;
+  padding: 20px;
+  border-radius: 12px;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 100%;
+  padding-right: 5px;
+}
+
+.task-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background-color: #cdb4db;
+  border-radius: 10px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+.task-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-item {
+  background: #bde0fe;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.task-text {
+  flex: 1;
+  word-wrap: break-word;
+  min-width: 200px;
+}
+
+input {
+  width: 100%;
+  padding: 7px;
+  border: 2px solid #d1c4e9;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-btn,
+.edit-btn,
+.delete-btn {
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  min-width: 90px;
+}
+
+.add-btn {
+  background-color: #70a197;
+  color: white;
+  width: 100%;
+}
+
+.add-btn:hover {
+  background-color: #59867d;
+}
+
+.edit-btn {
+  background-color: #229f2291;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #229f22;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #b81d2c;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 1024px) {
+  .todo-container {
+    width: 630px;
+    height: 600px;
+  }
+
+  .todo-wrapper {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .left-container,
+  .right-container {
+    height: 480px;
+  }
+
+  .task-list {
+    height: 100%;
+  }
+
+  .task-item {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .task-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .add-btn,
+  .edit-btn,
+  .delete-btn {
+    min-width: 55px;
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo-container {
+    width: 360px;
+    height: 670px;
+  }
+
+  .todo-wrapper {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-container,
+  .right-container {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .right-container {
+    height: 380px !important;
+    display: flex;
+    flex: auto;
+  }
+
+  .task-list {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .task-item {
+    flex-direction: row;
+    display: flex;
+  }
+
+  .task-buttons {
+    justify-content: space-between;
+  }
+
+  .add-btn,
+  .edit-btn,
+  .delete-btn {
+    min-width: auto;
+    width: 100%;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
