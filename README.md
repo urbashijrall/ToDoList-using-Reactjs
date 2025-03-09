@@ -12,7 +12,7 @@ A modern, fully responsive **To-Do List App** built with **React.js** and styled
 ✅ **Beautiful UI** - Aesthetic design with smooth animations
 
 ## 📂 Project Structure
-
+```
 reakt-Todolist
 │── public/
 │── src/
@@ -23,6 +23,7 @@ reakt-Todolist
 │── .gitignore
 │── package.json
 │── README.md
+```
 
 ## 🛠️ Installation & Setup
 
