@@ -45,12 +45,14 @@ reakt-Todolist
 
 5. **Open http://localhost:3000 in your browser**
 
+```
 🤝 Contributing
 🔹 Fork the repository
 🔹 Create a new branch: git checkout -b feature-name
 🔹 Commit your changes: git commit -m "Added a new feature"
 🔹 Push to the branch: git push origin feature-name
 🔹 Create a Pull Request
+```
 
 📜 License
 This project is free to use and open-source under the MIT License.
